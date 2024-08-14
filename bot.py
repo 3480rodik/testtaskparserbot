@@ -67,6 +67,7 @@ def main():
         print("===========")
         
         bot.send_message(message.chat.id, "\n".join(str(d) for d in new_data))
+        bot.send_message(message.chat.id, f"Средняя цена: {mean(new_data)}")
 
     bot.infinity_polling()
 
